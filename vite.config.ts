@@ -1,13 +1,12 @@
-import { defineConfig } from "vite";
-import { devtools } from "@tanstack/devtools-vite";
+import babel from '@rolldown/plugin-babel'
+import tailwindcss from '@tailwindcss/vite'
+import { devtools } from '@tanstack/devtools-vite'
+import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import cloudflareTunnel from "vite-plugin-cloudflare-tunnel";
-
-import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
-import babel from "@rolldown/plugin-babel";
-import tailwindcss from "@tailwindcss/vite";
-import { nitro } from "nitro/vite";
+import viteReact, { reactCompilerPreset } from '@vitejs/plugin-react'
+import { nitro } from 'nitro/vite'
+import { defineConfig } from 'vite'
+import cloudflareTunnel from 'vite-plugin-cloudflare-tunnel'
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
@@ -20,6 +19,6 @@ const config = defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     cloudflareTunnel(),
   ],
-});
+})
 
-export default config;
+export default config
