@@ -1,0 +1,16 @@
+allowBuilds:
+  cloudflared: true
+  esbuild: true
+  lightningcss: true
+packages:
+  - .
+permissions:
+  "@tanstack/devtools-vite":
+    skills: true
+  "@tanstack/react-router":
+    skills: true
+  "@tanstack/react-start":
+    skills: true
+skills:
+  dirs:
+    - .agents/skills
